@@ -57,6 +57,7 @@ class Student
   def self.first_X_students_in_grade_10(x)
     sql = <<-SQL
     SELECT * FROM students WHERE students.grade = 10 
+    ORDER BY students.id
     LIMIT ?
     SQL
     DB[:conn].execute(sql).collect do |row| 
