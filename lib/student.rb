@@ -3,7 +3,7 @@ class Student
 
   def self.new_from_db(row)
     new_song = self.new
-    
+    new_song.id = 
   end
 
   def self.all
